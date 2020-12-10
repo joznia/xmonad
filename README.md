@@ -1,3 +1,2 @@
 # xmonad
-my xmonad config
-very basic but it is evolving
+my xmonad config. it is quite basic so don't expect much lol
