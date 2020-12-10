@@ -1,0 +1,30 @@
+module Main (main) where
+import XMonad
+import XMonad.Config.Desktop
+import qualified Data.Map as M
+import XMonad.Prompt
+import XMonad.Prompt.Shell
+import XMonad.Prompt.XMonad
+import Graphics.X11.Xlib
+
+main :: IO ()
+main = xmonad
+    $ def
+    { terminal    		= myTerm
+    , modMask     		= myMod
+    , borderWidth 		= myBorderWidth
+    , focusedBorderColor 	= myFocusedBorderColor
+    , keys			= myKeys <+> keys def 
+    }
+
+myTerm    			= "xterm"
+myMod	 			= mod4Mask -- Win key or Super_L
+myBorderWidth 			= 4
+myFocusedBorderColor  		= "#87CEEB" 
+
+myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList
+         [ ((modm, xK_F12), xmonadPrompt def)
+         , ((modm, xK_F3 ), shellPrompt  def)
+         ]
+newKeys x  = myKeys x `M.union` keys def x
+
