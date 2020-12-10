@@ -46,5 +46,7 @@ main = do
         [ ((myModMask .|. shiftMask, xK_Return), spawn "dmenu_run" )
         , ((myModMask .|. shiftMask, xK_z), spawn "kill -9 $(pgrep xmobar)" )
         , ((myModMask, xK_Return), spawn myTerm)
+        , ((myModMask .|. shiftMask, xK_e), spawn "xterm -e vifm" )
+        , ((myModMask, xK_v), spawn "xterm -e vim" )
         ]
 
