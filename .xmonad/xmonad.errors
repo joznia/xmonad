@@ -1,16 +1,22 @@
 
-xmonad.hs:21:51: warning: [-Wdeprecations]
+xmonad.hs:25:13: warning: [-Wdeprecations]
+    In the use of ‘smartSpacing’ (imported from XMonad.Layout.Spacing):
+    Deprecated: "Use spacingRaw instead."
+   |
+25 |     tiled = smartSpacing 5 $ Tall nmaster delta ratio
+   |             ^^^^^^^^^^^^
+
+xmonad.hs:34:51: warning: [-Wdeprecations]
     In the use of ‘defaultConfig’
     (imported from XMonad, but defined in XMonad.Config):
     Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
    |
-21 |         { manageHook = manageDocks <+> manageHook defaultConfig
+34 |         { manageHook = manageDocks <+> manageHook defaultConfig
    |                                                   ^^^^^^^^^^^^^
 
-xmonad.hs:22:51: warning: [-Wdeprecations]
-    In the use of ‘defaultConfig’
-    (imported from XMonad, but defined in XMonad.Config):
-    Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
+xmonad.hs:41:1: warning: [-Wtabs]
+    Tab character found here.
+    Please use spaces instead.
    |
-22 |         , layoutHook = avoidStruts  $  layoutHook defaultConfig
-   |                                                   ^^^^^^^^^^^^^
+41 |         , startupHook = myStartupHook -- autostart
+   | ^^^^^^^^

@@ -3,7 +3,7 @@ Config { font = "xft:JetBrains Mono:size=10:antialias=true:hinting=true"
        , borderColor = "#019b9b"
        , border = TopB
        , bgColor = "#019b9b"
-       , fgColor = "#222222"
+       , fgColor = "#111111"
        , alpha = 255
        , position = Top
        , textOffset = -1
